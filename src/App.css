@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  justify-content: center;
+  margin: 0px,;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  font-size: 20px;
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  font-size: 20px;
+  text-align: left;
+  padding: 5px;
+}
+img {
+  height: 500px;
+  width: 350px;
+  align-self: center;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.subLightTitle {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 25px;
+  box-shadow: 0px 2px 4px black;
+}
+
+.lightTitle {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 35px;
+  box-shadow: 0px 2px 4px black;
+}
+.subDarkTitle {
+  background-color: #121212;
+  box-shadow: 0px 2px 4px black;
+  box-shadow: 0px 2px 4px black;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 25px;
+  
+}
+.darkTitle {
+  background-color: #121212;
+  box-shadow: 0px 2px 4px black;
+  box-shadow: 0px 2px 4px black;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 35px;
+}
+.darkContainer {
   display: flex;
   flex-direction: column;
+  width: 1500px;
+  padding: 15px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px black;
+  background-color: #2E2E2E;
+}
+.lightContainer {
+  display: flex;
+  flex-direction: column;
+  width: 1500px;
+  padding: 15px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px black;
+  background-color: #f4f4f4;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 25% 25%;
+  justify-content: space-evenly;
+  box-shadow: 0px 2px 4px black;
+  border-radius: 5px;
+}
+.textBox {
+  width: 80%;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.subTitle {
+  font-size: 25px;
+  text-align: center;
+  padding: 20px;
+}
+.light {
+  height: 100%;
+  background-color: #fafafa;
+  padding: 15px;
+  color: black;
+}
+.dark{
+  height: 100%;
+  background-color: #121212;
+  padding: 15px;
+  color: #E0E0E0;
+}
+.darkButton {
+  display: flex;
+  align-self: start;
+  justify-self: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #121212;
+  box-shadow: 0px 2px 4px black;
+  border:none;
+  width: 50px;
+  height: 35px;
+  padding: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.lightButton {
+  display: flex;
+  align-self: start;
+  justify-self: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  box-shadow: 0px 2px 4px black;
+  border:none;
+  width: 50px;
+  height: 35px;
+  padding: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.darkIcon {
+  width: 30px;
+  height: 30px;
+  color: #ffff;
+}
+.darkIcon:hover {
+  width: 35px;
+  height: 35px;
+  color: #013b28;
+}
+.lightIcon {
+  width: 30px;
+  height: 30px;
+  color: #0f0f0f;
+}
+.lightIcon:hover {
+  width: 35px;
+  height: 35px;
+  color: #008156;
+}
+.buttonRowContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 150px;
 }
