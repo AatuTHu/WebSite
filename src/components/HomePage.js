@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import profilepicture from './profilepicture.jpg'
 import { MdDarkMode } from "react-icons/md";
+import { Link } from 'react-router-dom'
 import { FaGithub } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { motion } from "framer-motion"
 
 export default function HomePage() {
 
@@ -11,6 +14,7 @@ export default function HomePage() {
   const [container, setContainer] = useState('')
   const [buttonTheme, setButtonTheme] = useState('')
   const [iconTheme, setIconTheme] = useState('')
+
 
   useEffect(() => {
     const preferredDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -33,7 +37,6 @@ export default function HomePage() {
   }, [])
 
   const changeTheme = () => {
-    console.log(theme);
     if (theme === "dark") {
       setIconTheme('lightIcon')
       setContainer('lightContainer')
@@ -52,11 +55,15 @@ export default function HomePage() {
   }
 
 return (
-<div className= {theme}>  
+  <motion.div animate={{opacity: [0.8,1]}}>
+<div className= {theme}>
   <div className={container}>
     <div className='buttonRowContainer'>
-      <button className={buttonTheme} onClick={ () => changeTheme()}><MdDarkMode className={iconTheme}/></button>
-      <a href='https://github.com/AatuTHu'><button className={buttonTheme}><FaGithub className={iconTheme}/></button></a>
+      <div className='leftButtonContainer'>  
+        <button className={buttonTheme} onClick={ () => changeTheme()}><MdDarkMode className={iconTheme}/></button>
+        <a href='https://github.com/AatuTHu'><button className={buttonTheme}><FaGithub className={iconTheme}/></button></a>
+      </div>
+      <button className={buttonTheme}><Link to="/Projects"><FaArrowRightLong className={iconTheme}/></Link></button>
     </div>
     <h1 className= {title} >Aatu Huttula</h1>
       <div className='subTitle'>  
@@ -71,18 +78,13 @@ return (
           I have been involved in various projects that include React web applications and React Native mobile applications. 
           With my background as an electrician turned to programmer, 
           I have excellent knowledge of both hardware and software.
-          I would describe myself as a quick learner, positive, on time person, problem solver
-        </p>
-
-        <p>
-          In my free time, I enjoy exercising, painting, and learning more about coding. 
         </p>
       </div>
 
       <h2 className={subTitle}>Education</h2>
       <div className='grid'>
           
-          <p><b>Oulu University of Applied Sciences</b> 2021- , information and communication technology </p>
+          <p><b>Oulu University of Applied Sciences</b> 2021- , ICT Engineer 240op</p>
           <p><b>OSAO Haukipudas</b> 2015-2018, electrician 180osp</p>
       </div>
 
@@ -156,9 +158,12 @@ return (
       <li>Ability to read and understand electrical drawings</li>
     </ul>
   </div>
-  </div>
-    <div>
+  <div className='bottomNav'>     
+        <button className={buttonTheme} onClick={ () => changeTheme()}><MdDarkMode className={iconTheme}/></button>
+      <button className={buttonTheme}><Link to="/Projects"><FaArrowRightLong className={iconTheme}/></Link></button>
+    </div>
   </div>
 </div>
+</motion.div>
 )
 }

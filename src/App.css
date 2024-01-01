@@ -1,10 +1,10 @@
 body {
   font-family:Arial, Helvetica, sans-serif;
   justify-content: center;
-  margin: 0px,;
+  margin: 0px;
   height: 100%;
+  
 }
-
 p {
   font-size: 20px;
   text-align: left;
@@ -41,7 +41,6 @@ img {
 .subDarkTitle {
   background-color: #121212;
   box-shadow: 0px 2px 4px black;
-  box-shadow: 0px 2px 4px black;
   padding: 10px;
   border-radius: 10px;
   font-size: 25px;
@@ -49,7 +48,6 @@ img {
 }
 .darkTitle {
   background-color: #121212;
-  box-shadow: 0px 2px 4px black;
   box-shadow: 0px 2px 4px black;
   padding: 10px;
   border-radius: 10px;
@@ -87,16 +85,42 @@ img {
   box-shadow: 0px 2px 4px black;
   border-radius: 5px;
 }
+.portfolioContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 1100px;
+  box-shadow: 0px 2px 4px black;
+  border-radius: 5px;
+}
 .textBox {
   width: 80%;
   padding: 15px;
   margin-left: auto;
   margin-right: auto;
 }
+.gridBox {
+  width: 1000px;
+  padding: 15px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 2px 4px black;
+}
 .subTitle {
   font-size: 25px;
   text-align: center;
   padding: 20px;
+}
+.projectTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 35px;
+  text-align: center;
+  padding: 30px;
 }
 .light {
   height: 100%;
@@ -117,7 +141,8 @@ img {
   align-items: center;
   background-color: #121212;
   box-shadow: 0px 2px 4px black;
-  border:none;
+  border-radius: 5px;
+  border: none;
   width: 50px;
   height: 35px;
   padding: 10px;
@@ -129,7 +154,8 @@ img {
   align-items: center;
   background-color: #f4f4f4;
   box-shadow: 0px 2px 4px black;
-  border:none;
+  border-radius: 5px;
+  border: none;
   width: 50px;
   height: 35px;
   padding: 10px;
@@ -140,8 +166,8 @@ img {
   color: #ffff;
 }
 .darkIcon:hover {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   color: #013b28;
 }
 .lightIcon {
@@ -150,13 +176,38 @@ img {
   color: #0f0f0f;
 }
 .lightIcon:hover {
-  width: 35px;
-  height: 35px;
   color: #008156;
 }
 .buttonRowContainer {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  
+}
+.leftButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-self: start;
+  width: 200px;
   justify-content: space-around;
-  width: 150px;
+}
+.adjectiveBox {
+  display: flex;
+  align-items: center;
+  width: 800px;
+}
+.adjective{
+  background-color: rgba(0, 223, 223, 0.342);
+  border-radius: 10px;
+  padding: 10px;
+  margin-left:10px;
+}
+.adjective:hover{
+  background-color: rgba(0, 223, 223, 0.342);
+}
+.bottomNav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
 }
